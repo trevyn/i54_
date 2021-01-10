@@ -1,0 +1,14 @@
+[package]
+authors = ["Eden <rust@eden2.com>"]
+description = "Work In Progress"
+edition = "2018"
+license = "MIT OR Apache-2.0"
+name = "i54"
+version = "0.0.0"
+
+[dependencies]
+juniper = {version = "0.15", optional = true}
+rusqlite = {version = "0.24", optional = true}
+serde = {version = "1", features = ["derive"]}
+thiserror = "1"
+ux_serde = {version = "0.2", features = ["serde"]}
