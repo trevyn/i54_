@@ -1,0 +1,32 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - master
+      
+  schedule:
+    - cron: '0 12 * * *'
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+
+  test:
+    name: test rust ${{ matrix.rust }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        rust: [1.46, stable, beta, nightly]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: hecrj/setup-rust-action@v1
+        with:
+          rust-version: ${{ matrix.rust }}
+      
+      - run: cargo test --all-features
