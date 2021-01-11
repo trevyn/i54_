@@ -4,7 +4,7 @@ A 54-bit signed integer abstraction. Created for easier interop with GraphQL and
 
 ## Premise
 
-Both Javascript and GraphQL natively represent large (over 32-bit) numbers as signed double-precision floating-point values, and do not have primitives representing large integers.
+Both Javascript and GraphQL natively represent large (over 32-bit) integers as signed double-precision floating-point values, and do not have primitives representing large integers.
 
 This presents a problem when wanting to represent an integer larger than a `u32` in Rust, while maintaining type interop with Javascript and GraphQL.
 
