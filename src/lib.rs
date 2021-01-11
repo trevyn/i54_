@@ -61,7 +61,7 @@ where
     // Define how to convert your custom scalar into a primitive type.
     fn resolve(&self) -> Value {
         let val: i64 = self.0.into();
-        Value::scalar(val as f64)
+        juniper::Value::scalar(val as f64)
     }
 
     // Define how to parse a primitive type into your custom scalar.
@@ -70,8 +70,8 @@ where
     }
 
     // Define how to parse a string value.
-    fn from_str<'a>(value: ScalarToken<'a>) -> ParseScalarResult<'a, S> {
-        <String as ParseScalarValue<S>>::from_str(value)
+    fn from_str<'a>(value: ScalarToken<'a>) -> juniper::ParseScalarResult<'a, S> {
+        <String as juniper::ParseScalarValue<S>>::from_str(value)
     }
 }
 
