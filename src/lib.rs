@@ -1,5 +1,12 @@
+#[cfg(doctest)]
+doc_comment::doctest!("../README.md");
+
 use serde::{Deserialize, Serialize};
-use std::convert::{TryFrom, TryInto};
+use std::{
+    convert::{TryFrom, TryInto},
+    ops::Add,
+    ops::AddAssign,
+};
 use ux_serde::i54 as ux_i54;
 
 #[derive(thiserror::Error, Debug)]
@@ -124,6 +131,20 @@ impl TryFrom<f64> for i54 {
 impl i54 {
     pub fn as_i64(&self) -> i64 {
         self.0.into()
+    }
+}
+
+impl AddAssign for i54 {
+    fn add_assign(&mut self, other: Self) {
+        *self = Self(self.0 + other.0);
+    }
+}
+
+impl Add for i54 {
+    type Output = Self;
+
+    fn add(self, other: Self) -> Self {
+        Self(self.0 + other.0)
     }
 }
 

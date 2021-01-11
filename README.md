@@ -1,4 +1,4 @@
-# i54 [![Crates.io](https://img.shields.io/crates/v/i54.svg)](https://crates.io/crates/i54)
+# i54\_ [![Crates.io](https://img.shields.io/crates/v/i54_.svg)](https://crates.io/crates/i54_)
 
 A 54-bit signed integer abstraction. Created for easier interop with GraphQL and Javascript, which don't have proper i64-compatible primitives.
 
@@ -21,16 +21,16 @@ To make programmer intent clear, we provide an `i54` type that should behave sim
 ## Usage
 
 ```toml
-i54 = {version = "0.0.1", features = ["rusqlite", "juniper"]}
+i54_ = {version = "0.0.1", features = ["rusqlite", "juniper"]}
 ```
 
 ```rust
-use i54::i54;
+use i54_::i54;
 
 fn main() {
- let x: i54 = 1;
- x += 1;
- assert!(x == 2);
+    let mut x: i54 = 1.into();
+    x += 1.into();
+    assert!(x == 2);
 }
 ```
 
