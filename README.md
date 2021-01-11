@@ -8,9 +8,9 @@ Both Javascript and GraphQL natively represent large (over 32-bit) integers as s
 
 This presents a problem when wanting to represent an integer larger than a `u32` in Rust, while maintaining type interop with Javascript and GraphQL.
 
-To make programmer intent clear, we provide an `i54` type that should behave similarly to a Rust primitive type, and is intended to represent values that would fit in a hypothetical 54-bit signed integer primitive.
+To make programmer intent clear, we provide an `i54` type that should ideally behave similarly to a Rust primitive type, and is intended to represent values that would fit in a hypothetical 54-bit signed integer primitive.
 
-`i54` is the largest signed integer for which all possible values are encoded exactly by an [IEEE 754 double-precision floating-point representation](https://en.wikipedia.org/wiki/Double-precision_floating-point_format). (Encoded roughly as 52 bits in the mantissa, 1 bit derived from the exponent bits, and 1 sign bit.)
+`i54` represents the largest signed integer for which all possible values are encoded exactly by an [IEEE 754 double-precision floating-point representation](https://en.wikipedia.org/wiki/Double-precision_floating-point_format). (Encoded roughly as 52 bits in the mantissa, 1 bit derived from the exponent bits, and 1 sign bit.)
 
 ## Exciting Trait Implementations
 
