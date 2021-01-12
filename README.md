@@ -21,6 +21,7 @@ To make programmer intent clear, we provide an `i54` type that should ideally be
 ## Usage
 
 ```toml
+[dependencies]
 i54_ = {version = "0.0.1", features = ["rusqlite", "juniper"]}
 ```
 
