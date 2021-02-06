@@ -22,7 +22,7 @@ To make programmer intent clear, we provide an `i54` type that should ideally be
 
 ```toml
 [dependencies]
-i54_ = {version = "0.0.1", features = ["rusqlite", "juniper"]}
+i54_ = {version = "0.1", features = ["rusqlite", "juniper"]}
 ```
 
 ```rust
@@ -35,4 +35,4 @@ fn main() {
 }
 ```
 
-### License: MIT OR Apache-2.0
+### License: MIT OR Apache-2.0 OR CC0-1.0 (public domain)

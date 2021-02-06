@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [0.1.0] - 2021-02-06
+
+### Added
+
+- Added `TryFrom` for `i128` and `u128`.
+
 ## [0.0.1] - 2021-01-11
 
 - Initial release.
