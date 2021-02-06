@@ -114,6 +114,32 @@ impl TryFrom<usize> for i54 {
     }
 }
 
+impl TryFrom<i128> for i54 {
+    type Error = i54Error;
+    fn try_from(item: i128) -> Result<Self, Self::Error> {
+        let item_i128 = item as i128;
+        let item_i54 = i54(ux_i54::new(item_i128 as i64));
+        if item_i54.as_i64() as i128 != item {
+            return Err(i54Error::ConversionFailed);
+        }
+
+        Ok(item_i54)
+    }
+}
+
+impl TryFrom<u128> for i54 {
+    type Error = i54Error;
+    fn try_from(item: u128) -> Result<Self, Self::Error> {
+        let item_u128 = item as u128;
+        let item_i54 = i54(ux_i54::new(item_u128 as i64));
+        if item_i54.as_i64() as u128 != item {
+            return Err(i54Error::ConversionFailed);
+        }
+
+        Ok(item_i54)
+    }
+}
+
 impl TryFrom<f64> for i54 {
     type Error = i54Error;
     fn try_from(item: f64) -> Result<Self, Self::Error> {
