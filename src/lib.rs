@@ -1,3 +1,5 @@
+#![forbid(unsafe_code)]
+
 #[cfg(doctest)]
 doc_comment::doctest!("../README.md");
 
