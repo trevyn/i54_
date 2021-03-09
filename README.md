@@ -1,6 +1,6 @@
 # i54\_ [![Crates.io](https://img.shields.io/crates/v/i54_.svg)](https://crates.io/crates/i54_)
 
-A 54-bit signed integer abstraction. Created for easier interop with GraphQL and Javascript, which don't have proper i64-compatible primitives.
+A 54-bit signed integer abstraction. Created for easier interop with GraphQL and Javascript, which don't have proper `i64`-compatible primitives.
 
 ## Premise
 
