@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [0.2.0] - 2021-05-23
+
+### Bumped
+
+- Bumped `rusqlite` to 0.25.
+
 ## [0.1.0] - 2021-02-06
 
 ### Added

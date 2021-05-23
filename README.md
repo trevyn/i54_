@@ -1,6 +1,6 @@
 # i54\_ [![Crates.io](https://img.shields.io/crates/v/i54_.svg)](https://crates.io/crates/i54_)
 
-A 54-bit signed integer abstraction. Created for easier interop with GraphQL and Javascript, which don't have proper `i64`-compatible primitives.
+A 54-bit signed integer abstraction for Rust. Created for easier interop with GraphQL and Javascript, which don't have proper `i64`-compatible primitives.
 
 ## Premise
 
@@ -22,7 +22,7 @@ To make programmer intent clear, we provide an `i54` type that should ideally be
 
 ```toml
 [dependencies]
-i54_ = {version = "0.1", features = ["rusqlite", "juniper"]}
+i54_ = {version = "0.2", features = ["rusqlite", "juniper"]}
 ```
 
 ```rust
